@@ -1,2 +1,2 @@
 # Algorithms-Basic-Snippets
-Small programming challenge completions.  Where the little learning stuff goes.
+Small fun little algorithm practice problems.  Where all the little learning stuff goes!
