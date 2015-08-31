@@ -1,0 +1,47 @@
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class base {
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		String color;
+		String middle;
+		String month;
+		
+		ArrayList<String> colorList    = new ArrayList<String>(Arrays.asList("blue","red", "yellow", "pink", "black", "white", "orange", "mint"));
+		ArrayList<String> colorMatch   = new ArrayList<String>(Arrays.asList("The Legend Of", "Little", "One", "The Chronicles Of", "The Tale Of", "Daring", "I was a Teenage", "The Weirdest"));
+		ArrayList<String> initialList  = new ArrayList<String>(Arrays.asList("a", "b", "c", "d", "j", "z", "e", "l", "s"));
+		ArrayList<String> initialMatch = new ArrayList<String>(Arrays.asList("Battle", "Girl", "Boy", "Elven", "Gaming", "Galaxy", "Princess", "Blood", "Anal"));
+		ArrayList<String> monthList    = new ArrayList<String>(Arrays.asList("january", "february", "july", "december"));
+		ArrayList<String> monthMatch   = new ArrayList<String>(Arrays.asList("X", "Song", "Games", "Academy"));
+
+		System.out.println("Hello! Let's find out the title of your next book!!!!\n");
+		System.out.println("Please enter your favorite color.");
+		color=input.next().toLowerCase();
+		System.out.println("Please enter your middle initial.");
+		middle=input.next().toLowerCase();
+		System.out.println("Please enter your birthday month.");
+		month=input.next().toLowerCase();
+		System.out.println();
+		
+		int colorIndex   = colorList.indexOf(color);
+		int initialIndex = initialList.indexOf(middle);
+		int monthIndex   = monthList.indexOf(month);
+		
+		String drumRoll = "*druummm rollllllllllll**********\n\n";
+		char[] thisCharArray = drumRoll.toCharArray();
+		for (char ch: thisCharArray){
+			System.out.print(ch);
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("And your book title is!!!\n");
+		System.out.println(colorMatch.get(colorIndex)+" "+initialMatch.get(initialIndex)+" "+monthMatch.get(monthIndex));
+	}
+}
