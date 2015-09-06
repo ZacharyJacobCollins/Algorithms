@@ -1,0 +1,42 @@
+import java.util.*;
+import java.text.*;
+public class Book {
+	public int DueDay;
+	public int DueMonth;
+	public int DueYear;
+	public int ReturnedDay;
+	public int ReturnedMonth;
+	public int ReturnedYear;
+	
+	//convert to date time object right away- check to see if it's before* the due date, if not then calculate the differences with another method.  
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Book book = new Book();
+		book.DueDay = input.nextInt();
+		book.DueMonth = input.nextInt();
+		book.DueYear = input.nextInt();
+		book.ReturnedDay = input.nextInt();
+		book.ReturnedMonth = input.nextInt();
+		book.ReturnedYear = input.nextInt();
+		 
+		if(book.ReturnedYear != book.DueYear && book.ReturnedYear < book.DueYear) {
+			System.out.println("10000");
+			System.exit(0);
+		}
+		else if(book.ReturnedMonth != book.DueMonth && book.ReturnedMonth < book.DueMonth) {
+			int temp = (book.ReturnedMonth - book.DueMonth) * 500;
+			System.out.println(Math.abs(temp));
+			System.exit(0);
+		}
+		else if(book.ReturnedDay != book.DueDay && book.ReturnedDay < book.DueDay){ 	
+			int temp = (book.ReturnedDay - book.DueDay) * 15;
+			System.out.println(Math.abs(temp)); 
+			System.exit(0);
+		}
+		else 
+		{
+			System.out.println(0);
+		}
+		input.close();
+	}
+}
