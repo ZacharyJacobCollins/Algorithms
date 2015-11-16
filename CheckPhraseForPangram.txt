@@ -10,18 +10,17 @@ public class Solution {
     public static String isPangram() {
 	   Scanner input = new Scanner(System.in);
        String entered = input.nextLine().toLowerCase();
-       ArrayList<Character> enteredList = new ArrayList<Character>(26);
-       //fill list
+       ArrayList<Character> enteredList = new ArrayList<Character>();
        for (char c : entered.toCharArray()) {
-           enteredList.add(c);
-       }
-       //check if not pangram
-       for (char c : "abcdefghijklmnopqrstuvwxyz".toCharArray()) {
-       	if(!(enteredList.contains(c))) {
-       		return ("not pangram");
+       	if((!(enteredList.contains(c))) && c!=' ') {
+       		enteredList.add(c);
        	}
        }
-       input.close();
-       return "pangram";
+       if (enteredList.size()==26){
+           return "pangram"; 
+       }
+       else {
+           return "not pangram";
+       }
     }
 } 
