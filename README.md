@@ -1,1 +1,1 @@
-<h1> Algorithm problems </h1> 
+<h1> Algorithm-snippets. </h1> 
