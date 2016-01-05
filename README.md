@@ -1,4 +1,1 @@
-# Algorithms
-Small programming challenge completions.  Just little learning stuff.
- 
- Derp
+<h1> Algorithm problems </h1> 
